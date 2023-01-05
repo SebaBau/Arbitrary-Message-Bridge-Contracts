@@ -1,5 +1,3 @@
-# Synapse Network Contract
-
 ## Tools
 
 - [Hardhat](https://github.com/nomiclabs/hardhat): compile and run the smart contracts on a local development network
