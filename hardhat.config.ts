@@ -14,6 +14,8 @@ import "hardhat-contract-sizer";
 import "hardhat-gas-reporter";
 import "hardhat-deploy";
 import "hardhat-deploy-ethers";
+import "@nomiclabs/hardhat-web3";
+import "@nomicfoundation/hardhat-chai-matchers";
 
 import networks from "./hardhat.network";
 
@@ -21,7 +23,7 @@ dotenvConfig({ path: resolve(__dirname, "./.env") });
 
 const config: HardhatUserConfig = {
   solidity: {
-    version: "0.8.15",
+    version: "0.8.17",
     settings: {
       optimizer: {
         enabled: true,
@@ -38,8 +40,7 @@ const config: HardhatUserConfig = {
     tests: "./test",
   },
   namedAccounts: {
-    deployer: 0,
-    owner: 1,
+    deployer: "",
   },
   typechain: {
     outDir: "typechain",
@@ -73,8 +74,6 @@ const config: HardhatUserConfig = {
     timeout: 30000,
   },
   etherscan: {
-    // apiKey: process.env.POLYGON_ETHERSCAN_API_KEY
-    // apiKey: process.env.BSC_ETHERSCAN_API_KEY
     apiKey: process.env.ETHERSCAN_API_KEY,
   },
 };
