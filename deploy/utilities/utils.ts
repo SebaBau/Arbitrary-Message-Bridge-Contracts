@@ -32,19 +32,11 @@ export function displayResult(name: string, result: DeployResult): void {
 
 export const chainName = (chainId: number): string => {
   switch (chainId) {
-    case 1:
-      return "Mainnet";
-    case 4:
-      return "Rinkeby";
-    case 56:
-      return "BSC";
-    case 97:
-      return "BSCTestnet";
-    case 137:
-      return "Polygon";
+    case 5:
+      return "Goerli";
     case 80001:
       return "Mumbai";
     default:
-      return "Rinkeby";
+      return "Unknown";
   }
 };
