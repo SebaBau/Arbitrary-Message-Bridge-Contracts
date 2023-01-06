@@ -6,6 +6,7 @@ cache/
 typechain/
 coverage/
 data/
+deployments/
 
 # files
 *.env
