@@ -9,6 +9,8 @@
     "coverage": "hardhat coverage --solcoverjs ./.solcover.js --temp artifacts --testfiles \"./test/**/*.ts\"",
     "deploy": "hardhat deploy --write true --network",
     "deploy:hardhat": "hardhat deploy --write true --network hardhat --tags",
+    "deploy:mumbai": "hardhat deploy --write true --network mumbai --tags",
+    "deploy:goerli": "hardhat deploy --write true --network goerli --tags",
     "verify": "hardhat etherscan-verify --license MIT --solc-input --network",
     "etherscan-verify": "hardhat etherscan:verify --network",
     "lint": "yarn run lint:sol && yarn run lint:ts && yarn run prettier:list-different",
@@ -24,6 +26,7 @@
     "@nomiclabs/hardhat-ethers": "^2.0.2",
     "@nomiclabs/hardhat-etherscan": "^2.1.5",
     "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "@nomicfoundation/hardhat-chai-matchers": "1.0.5",
     "@openzeppelin/contracts": "^4.3.0",
     "@typechain/ethers-v5": "^7.0.1",
     "@typechain/hardhat": "^2.3.0",
@@ -67,5 +70,8 @@
     "contracts/**",
     "deployments/**",
     "deploy/**"
-  ]
+  ],
+  "devDependencies": {
+    "@nomiclabs/hardhat-web3": "^2.0.0"
+  }
 }
